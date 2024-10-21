@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     color: 'White',
     paddingVertical: 12,
     alignItems: 'center',
+
     borderRadius: 12,
   },
   card: {

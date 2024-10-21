@@ -94,7 +94,12 @@ export const DashboardScreen = props => {
                 itemss => itemss.category === item,
               );
 
-              const totalAmount = filteredExpenses.reduce(
+              const totalExpenseAmount = expenses.reduce(
+                (sum, item) => sum + item.amount,
+                0,
+              );
+
+              const totalCategoryAmount = filteredExpenses.reduce(
                 (sum, item) => sum + item.amount,
                 0,
               );
@@ -124,7 +129,18 @@ export const DashboardScreen = props => {
                           fontWeight: 'bold',
                           fontSize: 18,
                         }}>
-                        ₹{formatIncome(totalAmount.toString())}
+                        ₹{formatIncome(totalCategoryAmount.toString())}
+                      </Text>
+                    )}
+
+                    {item === 'All' && (
+                      <Text
+                        style={{
+                          color: 'green',
+                          fontWeight: 'bold',
+                          fontSize: 18,
+                        }}>
+                        ₹{formatIncome(totalExpenseAmount.toString())}
                       </Text>
                     )}
                   </View>

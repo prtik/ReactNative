@@ -1,8 +1,8 @@
 // slices/categorySlice.js
-import { createSlice } from '@reduxjs/toolkit';
+import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-  categories: ["All"], // Array to hold the categories
+  categories: ['All'], // Array to hold the categories
 };
 
 const categorySlice = createSlice({
@@ -15,5 +15,5 @@ const categorySlice = createSlice({
   },
 });
 
-export const { addCategory } = categorySlice.actions;
+export const {addCategory} = categorySlice.actions;
 export default categorySlice.reducer;

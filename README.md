@@ -1,79 +1,84 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+<!-- Finance Tracker App -->
 
-# Getting Started
+A robust finance tracking app built with React Native, Material UI, and Redux. This app allows users to log their income, categorize expenses, and track their financial status in real-time.
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+Below point are explained in detail :
 
-## Step 1: Start the Metro Server
+- Project Setup
+- Running the App
+- Overview of Key Features
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+<!-- -Project Setup -->
 
-To start Metro, run the following command from the _root_ of your React Native project:
+To set up this project on your local machine, follow these steps:
 
-```bash
-# using npm
-npm start
+Prerequisites
+Ensure you have the following installed on your system:
 
-# OR using Yarn
-yarn start
-```
+Node.js (>= 14.x)
+npm or yarn
+React Native CLI
+Android Studio or Xcode (for iOS)
 
-## Step 2: Start your Application
+1. Clone the Repository:
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Clone this repository to your local machine using the following command:
+git clone https://github.com/prtik/ReactNative.git
 
-### For Android
+2. Open project where clonned
 
-```bash
-# using npm
-npm run android
+3. run below cmd
+   npm install
 
-# OR using Yarn
-yarn android
-```
+4. Run on a Simulator or Physical Device:
 
-### For iOS
+For Android:
+npm run-android
 
-```bash
-# using npm
-npm run ios
+For iOS:
+npm run-ios
 
-# OR using Yarn
-yarn ios
-```
+<!-- - Overview of Key Features -->
 
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
+1. Login Screen:
 
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
+The app starts with a login screen where users enter their credentials.
 
-## Step 3: Modifying your App
+2. Income Input:
 
-Now that you have successfully run the app, let's modify it.
+After logging in, users are prompted to enter their income. This information is essential for calculating the total balance and managing expenses.
 
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
+3. Dashboard:
 
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
+The dashboard provides a categorized overview of all expenses.
+Users can view expenses grouped by categories such as Groceries, Rent, Bills, Subscriptions, etc.
+The dashboard also shows the total expense and remaining balance based on the user's input income.
+Users can add new expense categories.
 
-## Congratulations! :tada:
+4. Add Expenses:
 
-You've successfully run and modified your React Native App. :partying_face:
+Each category has an option to add expenses.
+When a user clicks on a category, they can add expense details such as:
 
-### Now what?
+- Amount
+- Description
+  The app displays the updated list of expenses and calculates the total expense for each category.
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
+5. Persistent Data:
 
-# Troubleshooting
+All income, categories, and expense data are stored and persisted using Redux and Redux Persist, ensuring that data remains intact even after closing the app.
 
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+<!-- Technologies Used -->
 
-# Learn More
+React Native: For building the mobile application.
 
-To learn more about React Native, take a look at the following resources:
+Redux Toolkit: For managing the application's state (income, categories, expenses).
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Redux Persist: To persist the state across app restarts.
+
+React Navigation: For handling navigation between screens (Login, Income Entry, Dashboard).
+
+Material UI: For building a visually appealing and user-friendly interface.
+
+<!--for app testing use below login credential-->
+ <!-- email: test@gmail.com | password: 123456 -->
